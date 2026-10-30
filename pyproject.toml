@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "streamlit-gantt-track"
+version = "0.1.0"
+description = "One draggable Gantt-style track for Streamlit -- independent activities (start/end), milestones (a point in time), and labeled ranges sharing one axis. A single row/lane, not a full multi-row Gantt chart."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { name = "pjpeacock", email = "philip.j.peacock@gmail.com" },
+]
+keywords = ["streamlit", "streamlit-component", "gantt", "timeline", "track", "d3", "component"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Widget Sets",
+]
+# Verified against 1.61.1 (where st.components.v2 is confirmed present) -- not necessarily the
+# exact release that first introduced it, so treat this as a floor known to work, not a precise
+# historical minimum. Matches streamlit-segment-slider's/streamlit-marker-slider's own floor.
+dependencies = [
+    "streamlit>=1.61.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/pjpeacock/streamlit-gantt-track"
+Repository = "https://github.com/pjpeacock/streamlit-gantt-track"
+Issues = "https://github.com/pjpeacock/streamlit-gantt-track/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["streamlit_gantt_track"]
